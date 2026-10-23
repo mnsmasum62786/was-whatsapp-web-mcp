@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-10-23
+
+### Fixes
+- Fixed `auth` flow immediately erroring with "Session logged out" by ensuring stale/incomplete session keys are purged before fresh QR pairing.
+- Updated browser signature to standard headless configuration.
+
 ## 1.0.0 — 2026-10-23
 
 ### New Features

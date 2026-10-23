@@ -1,6 +1,6 @@
 {
   "name": "was-whatsapp-web-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shareable WhatsApp Web / Personal MCP server — send messages, media, and check numbers using your personal or business WhatsApp via QR scan.",
   "type": "module",
   "bin": {

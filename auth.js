@@ -9,6 +9,8 @@ export async function runAuthFlow() {
   const qrcode = (await import('qrcode-terminal')).default;
   const { default: pino } = await import('pino');
 
+  // Clean up any stale/incomplete session files before starting fresh pairing
+  await rm(AUTH_DIR, { recursive: true, force: true });
   await mkdir(AUTH_DIR, { recursive: true, mode: 0o700 });
   const { state, saveCreds } = await useMultiFileAuthState(AUTH_DIR);
 
@@ -18,7 +20,7 @@ export async function runAuthFlow() {
     const sock = makeWASocket({
       auth: state,
       logger: pino({ level: 'silent' }),
-      browser: ['Antigravity MCP', 'Chrome', '131.0.0'],
+      browser: ['Ubuntu', 'Chrome', '20.0.04'],
     });
 
     sock.ev.on('creds.update', saveCreds);
