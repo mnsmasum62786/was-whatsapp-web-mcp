@@ -1,0 +1,50 @@
+{
+  "name": "was-whatsapp-web-mcp",
+  "version": "1.0.0",
+  "description": "Shareable WhatsApp Web / Personal MCP server — send messages, media, and check numbers using your personal or business WhatsApp via QR scan.",
+  "type": "module",
+  "bin": {
+    "was-whatsapp-web-mcp": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "server.js",
+    "auth.js",
+    "config.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node cli.js",
+    "auth": "node cli.js auth"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whatsapp",
+    "whatsapp-web",
+    "baileys",
+    "claude",
+    "cursor",
+    "antigravity"
+  ],
+  "author": "Web Analytics Solution",
+  "license": "MIT",
+  "homepage": "https://github.com/mnsmasum62786/was-whatsapp-web-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnsmasum62786/was-whatsapp-web-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mnsmasum62786/was-whatsapp-web-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
